@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Andale', monospace;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url("nasa.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+/* The wrapper contains all of the page's content besides the footer, 
+which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+/* The footer is positioned at the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100px;
+  background: #4e5d6c;
+}
+
+/* The code styles the text at the bottom of the footer */
+.footer > .bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background: #1b3146;
+}
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+/* UFO icon */
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 165px;
+  width: 35px;
+  color: white;
+}
+
+/* Filter styles */
+.ufo-form {
+  margin-top: 50px;
+}
+
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #969f8e;
+  outline: none;
+}
+
+#table-area th {
+  text-align: center;
+  color: #f07639;
+  font-size: 1.9em;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 20px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+/* The styles for the parallax */
+.hero {
+  position: relative;
+  margin: 0;
+  background-image: url("Alien2.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  background: #e98850(0, 0, 0);
+  height: 450px;
+  padding: 50px;
+}
+
+.hero h1 {
+  margin-top: 200px;
+  font-size: 0.3rem;
+  animation: title 2.2s forwards linear;
+}
+
+.hero p {
+  font-size: 4rem;
+  opacity: 0;
+  animation: subtitle 2.2s forwards linear;
+  animation-delay: 2.2s;
+}
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  color: #3124a3;
+  font-size: .9em;
+}
+
+.form-control::-moz-placeholder {
+  color: #3124a3;
+  font-size: .9em;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #3124a3;
+  font-size: .9em;
+}
+
+.form-control:-moz-placeholder {
+  color: #3124a3;
+  font-size: .9em;
+}
+
+/* Media queries */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: none;
+  }
+
+  #table-area tr td:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    background: #1b3146;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    background: rgb(218, 221, 224);
+  }
+
+  #table-area td {
+    font-size: 1.75em;
+    text-align: center;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  #table-area tbody td::before {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    content: attr(data-th);
+  }
+
+  .hero h1 {
+    animation: smaller-title 2.2s forwards linear;
+  }
+}
+
+/* Title keyframe */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 8.5rem;
+    opacity: 2;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 6.5rem;
+    opacity: 2;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 2;
+  }
+}
